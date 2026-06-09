@@ -1,6 +1,13 @@
-h1 {
+* {
     text-align: center;
+}
+
+h1 {
     margin-bottom: 55px;
+}
+
+.set-btn {
+    margin-bottom: 20px;
 }
 
 .container {
