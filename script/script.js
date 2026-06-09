@@ -21,6 +21,6 @@ const hoveredState = document.querySelectorAll(".row");
 
 hoveredState.forEach((row) => {
   row.addEventListener("mouseover", (e) => {
-    e.target.style.background = "green";
+    e.target.style.background = "greenyellow";
   });
 });
