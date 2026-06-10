@@ -1,8 +1,6 @@
 const container = document.querySelector(".container");
 const setBtn = document.querySelector(".set-btn");
 
-let size = 0;
-
 container.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("column")) {
     e.target.style.background = "greenyellow";
@@ -31,7 +29,7 @@ function createGrid(size) {
 }
 
 setBtn.addEventListener("click", () => {
-  size = parseInt(prompt("How big should the grid be?", "0"), 10);
+  const size = parseInt(prompt("How big should the grid be?", "0"), 10);
   removeChildElements(container);
   createGrid(size);
 });
