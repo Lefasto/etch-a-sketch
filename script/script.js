@@ -1,9 +1,15 @@
+const colors = ["red", "blue", "green", "gray", "yellow", "pink"];
 const container = document.querySelector(".container");
 const setBtn = document.querySelector(".set-btn");
 
+function randomColor(colorsArray) {
+  const colorPicker = Math.floor(Math.random() * colorsArray.length);
+  return colorsArray[colorPicker];
+}
+
 container.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("column")) {
-    e.target.style.background = "greenyellow";
+    e.target.style.background = randomColor(colors);
   }
 });
 
@@ -30,6 +36,12 @@ function createGrid(size) {
 
 setBtn.addEventListener("click", () => {
   const size = parseInt(prompt("How big should the grid be?", "0"), 10);
+
+  if (size > 100) {
+    prompt("size should be 100 or less!");
+    return;
+  }
+
   removeChildElements(container);
   createGrid(size);
 });
