@@ -38,7 +38,7 @@ setBtn.addEventListener("click", () => {
   const size = parseInt(prompt("How big should the grid be?", "0"), 10);
 
   if (size > 100) {
-    prompt("size should be 100 or less!");
+    alert("size should be 100 or less!");
     return;
   }
 
