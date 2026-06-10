@@ -19,7 +19,7 @@ h1 {
     margin: auto;
 }
 
-.row {
+.column {
     border: 1px solid black;
     width: 25px;
     height: 25px;
